@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,300');
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-style: normal;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+button:active,
+button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+body {
+  font-weight: 300;
+  background-color: #f4fbff;
+  color: rgba(0, 0, 0, 0.7);
+}
+.main-title {
+  font-weight: 100;
+  text-align: center;
+  line-height: 1em;
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.main-wrapper {
+  padding-top: 6%;
+  width: 540px;
+  margin: 0 auto;
+  position: relative;
+}
+.todo-wrapper {
+  margin-top: 20px;
+  background: white;
+}
+input[type="text"] {
+  font-weight: 100;
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  color: gray;
+  padding-left: 50px;
+  outline: none;
+}
+input[type="text"]::placeholder {
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+#for-todo div {
+  background: white;
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 9px;
+  position: relative;
+}
+#for-todo div:hover .close {
+  display: block;
+}
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 65px;
+  margin-right: 100px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 27px;
+  width: 27px;
+  border: 1px solid #eee;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  background-color: white;
+  margin-left: 15px;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: rgba(0, 0, 0, 0);
+}
+/* When the checkbox is checked, add a blue background */
+input:checked ~ .container {
+  text-decoration: line-through;
+}
+.container > input:checked {
+  text-decoration: underline;
+  background-color: #000000;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid #32CD32;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  color: green;
+}
+.control-panel {
+  height: 37px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  font-size: 15px;
+  line-height: 2.5em;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  display: none;
+}
+.item-left {
+  margin-left: 20px;
+}
+.sort-items {
+  list-style: none;
+}
+.sort-items .sort-item {
+  display: inline;
+  padding: 3px 8px;
+  cursor: pointer;
+  box-sizing: content-box;
+  border: 1px solid white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.sort-items .sort-item:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sort-items .active {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+#clear {
+  cursor: pointer;
+  margin-right: 20px;
+}
+#clear:hover {
+  text-decoration: underline;
+}
+.text-decor {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.1);
+}
+.close {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  display: none;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: red;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+.hide-show {
+  position: absolute;
+  top: 215;
+  left: 16;
+  cursor: pointer;
+  display: none;
+}

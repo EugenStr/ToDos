@@ -3,14 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ToDo</title>
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<main class="main-wrapper">
 		<h1 class="main-title">todos</h1>
-		<div class="todo-wrapper">
-			
-		</div>
+		<section class="todo-wrapper">
+			<input type="text" placeholder="Whats need to do?" id="input">
+			<span class="hide-show">&#9660;</span>
+			<span class="hide-show">&#9650;</span>
+		</section>
+		<section id="for-todo">
+		</section>
+		<section class="control-panel">
+			<span class="item-left"></span>
+			<ul class="sort-items">
+				<li class="sort-item active" onclick="sortAll()" >All</li>
+				<li class="sort-item" onclick="sortActive()">Active</li>
+				<li class="sort-item" onclick="sortCompleted()">Completed</li>
+			</ul>
+			<span id="clear" onclick="clearComp()">Clear completed</span>
+		</section>
 	</main>
 	<script src="script.js"></script>
 </body>
