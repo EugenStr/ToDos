@@ -99,7 +99,7 @@ function countItem(arr) {
 	}
 	
 	else {
-		itemleft.innerHTML = arr.length + ' item left';
+		itemleft.innerHTML = arr.length + ' items left';
 	}
 }
 
