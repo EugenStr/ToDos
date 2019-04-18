@@ -76,8 +76,14 @@ input.onkeypress = function(e = event) {
 }
 
 
+
 function closeBlock(e = event) {
-	let node = this.parentNode.remove();
+	close(this)
+}
+
+
+function close(value) {
+	value.parentNode.remove();
 	completedArr.pop()
 	countItem(completedArr)
 }
@@ -182,11 +188,8 @@ function sortCompleted() {
 
 
 function clearComp() {
-	let labelCompleted = document.getElementsByClassName('text-decor');
-
+	let labelCompleted = document.querySelectorAll('.text-decor');
 	for (let i = 0; i < labelCompleted.length; i++) {
-		labelCompleted[i].parentNode.remove()	
-		completedArr.pop()
-		countItem(completedArr)
+		close(labelCompleted[i])
 	}
 }
